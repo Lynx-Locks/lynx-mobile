@@ -8,12 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    func genPasskey() {
+        
+    }
+    
+    func unlockDoor() {
+        
+    }
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Image(.lynxLogo) // Replace `.building` with your image's name
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .cornerRadius(10)
+                .padding()
+            Button(action: unlockDoor) {
+                Text("Unlock Door")
+            }
+            Spacer()
+            Button(action: genPasskey) {
+                Text("Generate Passkey")
+            }
         }
         .padding()
     }
